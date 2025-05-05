@@ -1,0 +1,73 @@
+<!--
+FILE : editorView.html
+PROJECT : Simple Text Editor
+PROGRAMMER : Chris Wickens
+FIRST VERSION : 11/25/2024
+DESCRIPTION :
+    The HTML required to present a basic text editor that uses jquery/ajax/php.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Text Editor</title>
+    <!-- Minimal jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- The title section of the editor -->
+    <div id="editorTitle">
+        <h2>Super Simple Text Editor</h2>
+    </div>
+
+    <div class="controls">
+
+        <!-- Load files button -->
+        <div class="control-group">
+            Click to load files:
+            <button id="loadFileListButton" class="controlElement">Load Files</button>
+        </div>
+
+        <!-- Separator -->
+        <div class="separator"></div>
+
+        <!-- Section for selecting files/saving files -->
+        <div class="control-group">
+            File List
+            <select id="selectFile" class="controlElement" disabled>
+                <option value="" disabled selected>Click LOAD FILES</option>
+            </select>
+
+            <!-- Button for saving -->
+            <button id="saveButton" class="controlElement" disabled>Save File</button>
+        </div>
+
+        <!-- Separator -->
+        <div class="separator"></div>
+
+        <!-- Save as -->
+        <div class="control-group">
+            Save To New File
+            <input type="text" id="newFileName" class="controlElement" placeholder="New File Name" disabled>
+
+            <!-- Button to save as -->
+            <button id="saveAsButton" class="controlElement" disabled>Save File As</button>
+        </div>
+    </div>
+    
+    <!-- Text editing area -->
+    <textarea id="editor" rows="20" cols="80"></textarea>
+    <div id="statusSection">
+
+        <!-- Section for status/error messages -->
+        <div id="messageSection"></div>
+        <div id="errorSection"></div>
+    </div>
+    <script src="javascript/scripts.js"></script>
+</body>
+
+</html>

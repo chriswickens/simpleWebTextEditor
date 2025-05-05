@@ -1,0 +1,125 @@
+/* 
+    FILE : style.css
+    PROJECT : Simple Text Editor
+    PROGRAMMER : Chris Wickens
+    FIRST VERSION : 11/25/2024
+    DESCRIPTION :
+        Contains the CSS necessary to make the overall look of a basic text editor palatable to the eyes.
+        I used some code from previous assignments when I was in the CPA program for this.
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full height of the browser */
+    display: flex;
+    flex-direction: column;
+    background: #0F4C75;
+    color: white
+}
+
+button{
+    background-color: honeydew;
+    min-height:40px;
+    border-radius: 7px;
+    font-size: larger;
+    letter-spacing: 1px;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+#editorTitle {
+    border: 2px solid black;
+    text-align: center;
+    margin: 5px;
+}
+
+.controls {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row; /* Align elements in a row */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5), 
+    inset 3px 3px 6px rgba(0, 0, 0, 0.3), 
+    inset -3px -3px 6px rgba(255, 255, 255, 0.5);
+}
+
+#selectFile{
+    min-height:40px;
+}
+
+#newFileName{
+    min-height:30px;
+}
+
+.control-group {
+    display: flex;
+    min-width: 100px;
+    flex-direction: column; /* Stack control elements vertically */
+    gap: 10px;
+    align-items: center; /* Center items horizontally within the group */
+}
+
+.separator {
+    border-left: 2px solid black; /* Vertical separator */
+    height: 100%; /* Full height of the controls container */
+    margin: 0 10px; /* Spacing around the separator */
+}
+
+#editor {
+    border: 2px solid black;
+    background-color: antiquewhite;
+    margin: 10px;
+    padding: 10px;
+    width: calc(100% - 24px); /* Adjust for padding and border */
+    height: 100%;
+    resize: none; /* Prevent resizing of the text box */
+    flex-grow: 1; /* Allow the editor to resize */
+    box-sizing: border-box; /* padding and border in the element's complete width and height */
+}
+
+#editor:focus {
+    /* Remove the outline when focus is on the text box */
+    outline: none;
+    /* acts as an indicator for focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5), 
+                inset 3px 3px 6px rgba(0, 0, 0, 0.3), 
+                inset -3px -3px 6px rgba(255, 255, 255, 0.5);
+}
+
+#errorSection{
+    color: red;
+    background-color: white;
+    font-weight: 600;
+    height: 20px; /* Fixed height to avoid layout shifting */
+    overflow: hidden;
+    white-space: nowrap; /* Prevent text wrapping */
+    text-align: center;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+#messageSection{
+    height: 20px;
+    overflow: hidden;
+    white-space: nowrap; /* Prevent text wrapping */
+} 
+
+#statusSection {
+    background-color: grey;
+    height: 40px;
+    margin: 0px 0px 10px 0px;
+    display: flex;
+    justify-content: space-between; /* Space elements at opposite ends */
+    align-items: center; /* Center items vertically */
+    padding: 0 20px; /* Keep things spaced more better */
+    
+    /* Embossed effect using inset shadows */
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.3), 
+                inset -3px -3px 6px rgba(255, 255, 255, 0.5);
+}
